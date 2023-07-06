@@ -25,7 +25,7 @@ if(isset($_POST['submit']))
 	$a2 = $_POST['a2'];
 	$a3 = $_POST['a3'];
 	$a4= $_POST['a4'];
-	$host="127.0.0.1";
+	$host="192.168.0.144";
 	$port="";
 	$socket="";
 	$user="root";
@@ -85,7 +85,7 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 </head>
 <body>
 	<?php
-	$host="127.0.0.1";
+	$host="192.168.0.144";
 	$port="";
 	$socket="";
 	$user="root";
@@ -108,7 +108,7 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 	<h2>Schedule your day!</h2>
      	<label></label>
       <?php
-			$host="127.0.0.1";
+			$host="192.168.0.144";
 			$port="";
 			$socket="";
 			$usere="root";
@@ -177,7 +177,7 @@ else {
 	</head>
 	<body>
 		<?php
-		$host="127.0.0.1";
+		$host="192.168.0.144";
 		$port="";
 		$socket="";
 		$user="root";
@@ -200,7 +200,7 @@ else {
 		<h2>Sorry your schedule is fixed,come tommorrow fix it by 8:30AM</h2>
 	     	<label></label>
 	      <?php
-				$host="127.0.0.1";
+				$host="192.168.0.144";
 				$port="";
 				$socket="";
 				$usere="root";

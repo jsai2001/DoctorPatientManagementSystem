@@ -7,7 +7,7 @@
 	$a2 = $_POST['a2'];
 	$a3 = $_POST['a3'];
 	$a4= $_POST['a4'];
-	$host="127.0.0.1";
+	$host="192.168.0.144";
 	$port="";
 	$socket="";
 	$user="root";
