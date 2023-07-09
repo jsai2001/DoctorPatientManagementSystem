@@ -41,3 +41,4 @@ CREATE TABLE `slots` (
 	`a4` VARCHAR(255) NOT NULL DEFAULT 'Empty',
 	`user_name` VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB;
+INSERT INTO `doctor`(`id`, `user_name`, `password`, `name`, `age`, `gender`, `dob`, `mail`, `address`) VALUES ('1','jeevan','jeevan','Jeevan','22','Male','2023-07-09','jeevansaikanaparthi@gmail.com','Tenali');
