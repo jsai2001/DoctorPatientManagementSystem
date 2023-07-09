@@ -1,11 +1,4 @@
 <?php
-// $connect = mysqli_connect(
-// 	'192.168.0.144',
-// 	'root',
-// 	'',
-// 	'doctorpatient',
-// 	'8081'
-// );
 $connect = mysqli_connect(
 	'db',
 	'root',
