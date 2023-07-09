@@ -9,7 +9,7 @@
     $fileext=explode('.', $filename);
     $filecheck = strtolower(end($fileext));
     $fileextstored=array('png','jpg','jpeg','webp','gif','pdf');
-    $db = mysqli_connect("localhost", "root", "", "doctorpatient");
+    $db = mysqli_connect("db", "root", "password", "doctorpatient");
 
     function validate($data){
       $data = trim($data);

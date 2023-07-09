@@ -79,7 +79,7 @@ background: transparent; /* make scrollbar transparent */
       <th>4-30 to 5-00</th>
     </tr>
     <?php
-    $conn=mysqli_connect("localhost","root","","doctorpatient");
+    $conn=mysqli_connect("db","root","password","doctorpatient");
     if($conn->connect_error)
     {
       die("Connection failed:".$conn->connect_error);

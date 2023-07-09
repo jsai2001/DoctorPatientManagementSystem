@@ -6,7 +6,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
  ?>
  <?php
- $connection=mysqli_connect("localhost","root","");
+ $connection=mysqli_connect("db","root","password");
  $db=mysqli_select_db($connection,'doctorpatient');
  $val="";
  if(isset($_POST['search']))
@@ -92,7 +92,7 @@ background: transparent; /* make scrollbar transparent */
       <th>Username</th>
     </tr>
     <?php
-    $conn=mysqli_connect("localhost","root","","doctorpatient");
+    $conn=mysqli_connect("db","root","password","doctorpatient");
     if($conn->connect_error)
     {
       die("Connection failed:".$conn->connect_error);

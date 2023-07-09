@@ -23,7 +23,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           <label>Username:</label>
           <?php echo $_SESSION['user_name']; ?><br>
           <?php
-          $db = mysqli_connect("localhost", "root", "", "doctorpatient");
+          $db = mysqli_connect("db", "root", "password", "doctorpatient");
           $query = "SELECT * FROM patients where user_name='$_SESSION[user_name]'";
     	  $display = mysqli_query($db,$query);
     	  while($result=mysqli_fetch_array($display)){

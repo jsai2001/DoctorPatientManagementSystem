@@ -13,7 +13,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 	{
 ?>
 <?php
-$connection=mysqli_connect("localhost","root","");
+$connection=mysqli_connect("db","root","password");
 $db=mysqli_select_db($connection,'doctorpatient');
 if(isset($_POST['submit']))
 {

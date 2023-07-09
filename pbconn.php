@@ -3,7 +3,7 @@ session_start();
 if(isset($_POST['submit']))
 {
     $time=$_POST['time'];
-    $c=mysqli_connect("localhost","root","","doctorpatient");
+    $c=mysqli_connect("db","root","password","doctorpatient");
     $query = "SELECT $time FROM slots limit 1";
     $result = mysqli_query($c,$query);
     if ($result) {
