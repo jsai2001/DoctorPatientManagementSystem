@@ -52,7 +52,7 @@ background: transparent; /* make scrollbar transparent */
       if(location.hash === "#!/stealingyourhistory") {
             history.replaceState(null, document.title, location.pathname);
             setTimeout(function(){
-              location.replace("http://localhost/DoctorPatientManagementSystemModified1/Web_Page-master/d-home.php");
+              location.replace("http://192.168.0.144/d-home.php");
             },0);
       }
     }, false);
