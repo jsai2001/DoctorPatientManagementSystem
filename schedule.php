@@ -25,11 +25,11 @@ if(isset($_POST['submit']))
 	$a2 = $_POST['a2'];
 	$a3 = $_POST['a3'];
 	$a4= $_POST['a4'];
-	$host="192.168.0.144";
+	$host="db";
 	$port="";
 	$socket="";
 	$user="root";
-	$password="";
+	$password="password";
 	$dbname="doctorpatient";
 
 	// Database connection
@@ -85,11 +85,11 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 </head>
 <body>
 	<?php
-	$host="192.168.0.144";
+	$host="db";
 	$port="";
 	$socket="";
 	$user="root";
-	$password="";
+	$password="password";
 	$dbname="doctorpatient";
 
 	// Database connection
@@ -108,11 +108,11 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 	<h2>Schedule your day!</h2>
      	<label></label>
       <?php
-			$host="192.168.0.144";
+			$host="db";
 			$port="";
 			$socket="";
 			$usere="root";
-			$password="";
+			$password="password";
 			$dbname="doctorpatient";
 
 			$conn = new mysqli($host, $usere, $password, $dbname)
@@ -177,11 +177,11 @@ else {
 	</head>
 	<body>
 		<?php
-		$host="192.168.0.144";
+		$host="db";
 		$port="";
 		$socket="";
 		$user="root";
-		$password="";
+		$password="password";
 		$dbname="doctorpatient";
 
 		// Database connection
@@ -200,11 +200,11 @@ else {
 		<h2>Sorry your schedule is fixed,come tommorrow fix it by 8:30AM</h2>
 	     	<label></label>
 	      <?php
-				$host="192.168.0.144";
+				$host="db";
 				$port="";
 				$socket="";
 				$usere="root";
-				$password="";
+				$password="password";
 				$dbname="doctorpatient";
 
 				$conn = new mysqli($host, $usere, $password, $dbname)

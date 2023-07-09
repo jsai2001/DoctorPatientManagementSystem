@@ -1,10 +1,10 @@
 <?php
 
-$host="192.168.0.144";
+$host="db";
 $port="";
 $socket="";
 $user="root";
-$password="";
+$password="password";
 $dbname="doctorpatient";
 
 $conn = new mysqli($host, $user, $password, $dbname)

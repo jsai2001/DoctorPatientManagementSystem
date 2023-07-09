@@ -1,9 +1,9 @@
 <?php
-$host="192.168.0.144";
+$host="db";
 $port="";
 $socket="";
 $user="root";
-$password="";
+$password="password";
 $dbname="test";
 	$firstName = $_POST['firstName'];
 	$lastName = $_POST['lastName'];
