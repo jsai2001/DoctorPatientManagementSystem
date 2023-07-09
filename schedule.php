@@ -40,11 +40,11 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else{
-		$query="INSERT INTO SLOTS (date,time,m1,m2,m3,m4,a1,a2,a3,a4,user_name) values(current_date(),current_time(),'$_POST[m1]','$_POST[m2]','$_POST[m3]','$_POST[m4]','$_POST[a1]','$_POST[a2]','$_POST[a3]','$_POST[a4]','Patel')";
+		$query="INSERT INTO slots (date,time,m1,m2,m3,m4,a1,a2,a3,a4,user_name) values(current_date(),current_time(),'$_POST[m1]','$_POST[m2]','$_POST[m3]','$_POST[m4]','$_POST[a1]','$_POST[a2]','$_POST[a3]','$_POST[a4]','Patel')";
 		$query_run=mysqli_query($conn,$query);
 		if(!$query_run)
   	{
-			$query="UPDATE SLOTS SET date=current_date(),time=current_time(),m1='$_POST[m1]',m2='$_POST[m2]',m3='$_POST[m3]',m4='$_POST[m4]',a1='$_POST[a1]',a2='$_POST[a2]',a3='$_POST[a3]',a4='$_POST[a4]' where `date`=CURDATE()";
+			$query="UPDATE slots SET date=current_date(),time=current_time(),m1='$_POST[m1]',m2='$_POST[m2]',m3='$_POST[m3]',m4='$_POST[m4]',a1='$_POST[a1]',a2='$_POST[a2]',a3='$_POST[a3]',a4='$_POST[a4]' where `date`=CURDATE()";
 			$query_run=mysqli_query($conn,$query);
   	}
   	else{
@@ -117,7 +117,7 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 
 			$conn = new mysqli($host, $usere, $password, $dbname)
 	or die ('Connection Failed! ' . mysqli_connect_error());
-      $sql = "SELECT * FROM slots WHERE date='CURDATE()'";
+      $sql = "SELECT * FROM slots WHERE date=CURDATE()";
       $result = mysqli_query($conn, $sql) or die("Bad query: $sql");
 while($row = mysqli_fetch_assoc($result)) {
     echo $row['date'];
