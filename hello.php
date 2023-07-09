@@ -1,4 +1,5 @@
 <?php
+echo "Hello World";
 $connect = mysqli_connect(
 	'db',
 	'root',
