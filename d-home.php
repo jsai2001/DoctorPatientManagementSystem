@@ -5,7 +5,7 @@ if(isset($_POST['update']))
 {
   $usrnme=$_POST['uname'];
   $name=$_POST['name'];
-  $query="UPDATE `DOCTOR` SET name='$_POST[name]',age='$_POST[age]',gender='$_POST[gender]',dob='$_POST[dob]',mail='$_POST[mailid]',address='$_POST[addr]' where user_name='$usrnme' ";
+  $query="UPDATE `doctor` SET name='$_POST[name]',age='$_POST[age]',gender='$_POST[gender]',dob='$_POST[dob]',mail='$_POST[mailid]',address='$_POST[addr]' where user_name='$usrnme' ";
   //echo $query;
   $query_run=mysqli_query($connection,$query);
   if($query_run)
