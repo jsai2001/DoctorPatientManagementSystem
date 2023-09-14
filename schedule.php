@@ -40,16 +40,16 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else{
-		$query="INSERT INTO slots (date,time,m1,m2,m3,m4,a1,a2,a3,a4,user_name) values(current_date(),current_time(),'$_POST[m1]','$_POST[m2]','$_POST[m3]','$_POST[m4]','$_POST[a1]','$_POST[a2]','$_POST[a3]','$_POST[a4]','Patel')";
+		$query="INSERT INTO slots (date,time,m1,m2,m3,m4,a1,a2,a3,a4,user_name) values(current_date(),current_time(),'$_POST[m1]','$_POST[m2]','$_POST[m3]','$_POST[m4]','$_POST[a1]','$_POST[a2]','$_POST[a3]','$_POST[a4]','Patel') on duplicate key update date=current_date() , time=current_time() , m1='$_POST[m1]' , m2='$_POST[m2]' , m3='$_POST[m3]' , m4='$_POST[m4]' , a1='$_POST[a1]' , a2='$_POST[a2]' , a3='$_POST[a3]' , a4='$_POST[a4]' , user_name='Patel'";
 		$query_run=mysqli_query($conn,$query);
 		if(!$query_run)
-  	{
+  		{
 			$query="UPDATE slots SET date=current_date(),time=current_time(),m1='$_POST[m1]',m2='$_POST[m2]',m3='$_POST[m3]',m4='$_POST[m4]',a1='$_POST[a1]',a2='$_POST[a2]',a3='$_POST[a3]',a4='$_POST[a4]' where `date`=CURDATE()";
 			$query_run=mysqli_query($conn,$query);
-  	}
-  	else{
+  		}
+  		else{
 
-  	}
+  		}
 		/*$stmt = $conn->prepare("insert into slots(m1, m2, m3, m4, a1, a2, a3, a4) values(?, ?, ?, ?, ?, ?, ?, ?) where user_name='Patel'");
 		$stmt->bind_param("ssssssss", $m1, $m2, $m3, $m4, $a1, $a2, $a3, $a4);
 		$execval = $stmt->execute();
@@ -75,7 +75,7 @@ or die ('Connection Failed! ' . mysqli_connect_error());
     if(location.hash === "#!/stealingyourhistory") {
           history.replaceState(null, document.title, location.pathname);
           setTimeout(function(){
-            location.replace("http://192.168.0.144/d-home.php");
+            location.replace("http://192.168.0.140/d-home.php");
           },0);
     }
   }, false);
@@ -119,9 +119,9 @@ or die ('Connection Failed! ' . mysqli_connect_error());
 	or die ('Connection Failed! ' . mysqli_connect_error());
       $sql = "SELECT * FROM slots WHERE date=CURDATE()";
       $result = mysqli_query($conn, $sql) or die("Bad query: $sql");
-while($row = mysqli_fetch_assoc($result)) {
-    echo $row['date'];
-}
+		// while($row = mysqli_fetch_assoc($result)) {
+		// 	echo $row['date'];
+		// }
       echo "You Can Schedule only for today: ";
 			echo date("Y-m-d");
       ?>
@@ -167,7 +167,7 @@ else {
       if(location.hash === "#!/stealingyourhistory") {
             history.replaceState(null, document.title, location.pathname);
             setTimeout(function(){
-              location.replace("http://192.168.0.144/d-home.php");
+              location.replace("http://192.168.0.140/d-home.php");
             },0);
       }
     }, false);
@@ -209,7 +209,7 @@ else {
 
 				$conn = new mysqli($host, $usere, $password, $dbname)
 		or die ('Connection Failed! ' . mysqli_connect_error());
-	      $sql = "SELECT * FROM slots WHERE date='CURRENT_DATE()'";
+	      $sql = "SELECT * FROM slots WHERE date=CURRENT_DATE()";
 	      $result = mysqli_query($conn, $sql) or die("Bad query: $sql");
 	while($row = mysqli_fetch_assoc($result)) {
 	    echo $row['date'];

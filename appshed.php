@@ -52,7 +52,7 @@ background: transparent; /* make scrollbar transparent */
       if(location.hash === "#!/stealingyourhistory") {
             history.replaceState(null, document.title, location.pathname);
             setTimeout(function(){
-              location.replace("http://192.168.0.144/d-home.php");
+              location.replace("http://192.168.0.140/d-home.php");
             },0);
       }
     }, false);
@@ -95,7 +95,7 @@ background: transparent; /* make scrollbar transparent */
       echo "</table>";
     }
     else {
-      echo "0-result";
+      // echo "0-result";
     }
     $conn->close();
      ?>

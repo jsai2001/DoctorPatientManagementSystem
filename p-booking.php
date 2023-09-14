@@ -1,4 +1,3 @@
-
 <?php
 	date_default_timezone_set("Asia/Kolkata");
 	$acceptedtime=strtotime('09:00:00');//now time is 2038
@@ -29,7 +28,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     if(location.hash === "#!/stealingyourhistory") {
           history.replaceState(null, document.title, location.pathname);
           setTimeout(function(){
-            location.replace("http://192.168.0.144/d-home.php");
+            location.replace("http://192.168.0.140/d-home.php");
           },0);
     }
   }, false);
